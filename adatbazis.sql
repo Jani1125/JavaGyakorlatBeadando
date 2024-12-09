@@ -31,6 +31,15 @@ CREATE TABLE hely (
                       FOREIGN KEY (moziazon) REFERENCES mozi(moziazon)
 );
 
+CREATE TABLE users (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    role VARCHAR(50) NOT NULL
+);
+
+
 INSERT INTO mozi (moziazon, mozinev, irszam, cim, telefon) VALUES
                                                                (1, 'A38 Hajó', 1113, 'Petõfi híd budai hídfõ', '4643940'),
                                                                (2, 'Bárka Kikötõ a Ráday utcában', 1092, 'Ráday utca', NULL),

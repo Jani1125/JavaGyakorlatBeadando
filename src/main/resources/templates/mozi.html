@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Budapest Mozi</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="/">Kezdőlap</a></li>
+        <li class="nav-item"><a class="nav-link active" href="/mozi">Mozitábla választó</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Kapcsolat</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Üzenetküldés</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Bejelentkezés</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Regisztráció</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<h3>Mozi műsorok</h3>
+
+<div class="container mt-4">
+  <table class="table table-bordered">
+    <thead>
+    <tr>
+      <th scope="col">Film Cím</th>
+      <th scope="col">Színes</th>
+      <th scope="col">Szinkron</th>
+      <th scope="col">Származás</th>
+      <th scope="col">Műfaj</th>
+      <th scope="col">Hossz</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Loop through the films and display their data in rows -->
+    <tr th:each="film : ${films}">
+      <td th:text="${film.filmcim}"></td>
+      <td th:text="${film.szines ? 'igen' : 'nem'}"></td>
+      <td th:text="${film.szinkron}"></td>
+      <td th:text="${film.szarmazas}"></td>
+      <td th:text="${film.mufaj}"></td>
+      <td th:text="${film.hossz}"></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
