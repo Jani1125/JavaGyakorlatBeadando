@@ -23,6 +23,6 @@ public class FilmController {
     public String getFilms(Model model) {
         List<Film> films = filmService.getAllFilms();
         model.addAttribute("films", films);
-        return "mozi";
+        return "film";
     }
 }

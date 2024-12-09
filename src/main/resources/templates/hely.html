@@ -25,25 +25,21 @@
     </div>
   </div>
 </nav>
-<h3>Mozi tábla</h3>
+<h3>Hely tábla</h3>
 
 <div class="container mt-4">
   <table class="table table-bordered">
     <thead>
     <tr>
-      <th scope="col">Mozi név</th>
-      <th scope="col">Irányítószám</th>
-      <th scope="col">Cím</th>
-      <th scope="col">Telefon</th>
+      <th scope="col">Film Kod</th>
+      <th scope="col">Mozi Azon</th>
     </tr>
     </thead>
     <tbody>
-    <!-- Loop through the mozi and display their data in rows -->
-    <tr th:each="mozi : ${mozi}">
-      <td th:text="${mozi.mozinev}"></td>
-      <td th:text="${mozi.irszam}"></td>
-      <td th:text="${mozi.cim}"></td>
-      <td th:text="${mozi.telefon}"></td>
+    <!-- Loop through the hely and display their data in rows -->
+    <tr th:each="hely : ${hely}">
+      <td th:text="${hely.fkod}"></td>
+      <td th:text="${hely.moziazon}"></td>
     </tr>
     </tbody>
   </table>
