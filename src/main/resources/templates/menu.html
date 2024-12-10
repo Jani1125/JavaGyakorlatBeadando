@@ -30,7 +30,7 @@
         </li>
         <!-- Admin felhasználóknak külön menüpont -->
         <li class="nav-item" sec:authorize="hasRole('ROLE_ADMIN')">
-          <a class="nav-link" th:href="@{/admin/home}">Admin</a>
+          <a class="nav-link" th:href="@{/admin/uzenetek}">Admin</a>
         </li>
       </ul>
       <!-- Azonosított felhasználó üdvözlése -->

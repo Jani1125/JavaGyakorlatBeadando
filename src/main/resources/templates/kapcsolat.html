@@ -11,7 +11,7 @@
 <h1>Kapcsolatfelvétel</h1>
 <form action="/kuldes" method="post">
     <label for="nev">Név:</label>
-    <input type="text" id="nev" name="nev" placeholder="Név" required>
+    <input type="text" id="nev" name="nev" th:value="${principal != null ? '' : 'Vendég'}" required>
 
     <label for="email">Email:</label>
     <input type="email" id="email" name="email" placeholder="Email">
