@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
+import java.security.Principal;
 import java.util.List;
 
 @Controller
@@ -95,4 +96,5 @@ public class HomeController {
         model.addAttribute("id", user.getId());
         return "regjo";
     }
+
 }
