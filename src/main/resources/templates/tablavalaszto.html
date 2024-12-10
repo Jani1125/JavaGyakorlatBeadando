@@ -5,14 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Bootstrap demo</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <style>
+    body {
+      background-color: #1e1e1e; /* Sötét fekete háttér */
+      color: #ffd700; /* Arany szín a szöveghez */
+    }
+    h1 {
+      text-align: center;
+      color: #ffd700; /* Arany szín a főcímhez */
+    }
+    h2 {
+      text-align: center;
+      color: #ffd700; /* Arany szín a főcímhez */
+    }
+    .button-container {
+      text-align: center;
+      margin-top: 20px;
+      display: flex;
+      justify-content: center; /* gombok középre igazítása */
+      gap: 10px; /* gombok közötti távolság */
+    }
+    .btn-custom {
+      background-color: #ffd700; /* Arany gomb */
+      color: #1e1e1e; /* Sötét fekete gomb szöveg */
+      padding: 10px 20px; /* nagyobb gomb méret */
+      border: none; /* elrejtett keret */
+      border-radius: 5px; /* lekerekített sarkok */
+      text-align: center; /* középre igazított szöveg */
+      text-decoration: none; /* eltávolítja az alapértelmezett aláhúzást */
+    }
+    .about-section {
+      margin-top: 40px;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
 <div th:insert="menu"></div>
 <h1>Válaszd ki, melyik táblát akarod megjeleníteni!</h1>
 
-<a class="nav-link" href="/film">Film tábla</a>
-<a class="nav-link" href="/mozi">Mozi tábla</a>
-<a class="nav-link" href="/hely">Hely tábla</a>
+<div class="button-container">
+  <a href="/film" class="btn btn-custom">Film tábla</a>
+  <a href="/mozi" class="btn btn-custom">Mozi tábla</a>
+  <a href="/hely" class="btn btn-custom">Hely tábla</a>
+</div>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
