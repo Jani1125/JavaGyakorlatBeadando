@@ -28,10 +28,10 @@ public class WebSecurityConfig {
                 http.csrf(csrf -> csrf.disable())
                         .authorizeHttpRequests(
                                 auth -> auth
-                                        .requestMatchers("/resources/**", "/","/home","/tablavalaszto", "/admin/uzenetek/valasz/**", "/film","/mozi","/films","/hely").authenticated()
+                                        .requestMatchers("/resources/**", "/","/home", "/admin/uzenetek/valasz/**").authenticated()
                                         .requestMatchers("/admin/**").hasRole("ADMIN")
-                                        .requestMatchers("/admin/uzenetek/valasz/**", "/kapcsolat", "/kuldes").permitAll()
-                                        .requestMatchers ("/resources/**", "/", "/tablavalaszto", "/kapcsolat", "/kuldes","/film","/mozi","/films","/hely","/regisztral", "/regisztral_feldolgoz").anonymous()
+                                        .requestMatchers("/admin/uzenetek/valasz/**", "/kapcsolat", "/kuldes", "/tablavalaszto","/film","/mozi","/films","/hely").permitAll()
+                                        .requestMatchers ("/resources/**", "/", "/kapcsolat", "/kuldes","/film","/mozi","/films","/hely","/regisztral", "/regisztral_feldolgoz").anonymous()
                         )
                         .formLogin(
                                 form -> form
