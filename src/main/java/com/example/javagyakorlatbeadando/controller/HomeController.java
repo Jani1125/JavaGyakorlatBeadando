@@ -61,7 +61,7 @@ public class HomeController {
 
     @GetMapping("/home")
     public String user(Model model) {
-        return "user";
+        return "index";
     }
     @GetMapping("/admin/home")
     public String admin() {
@@ -90,7 +90,6 @@ public class HomeController {
             }
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
         user.setPassword(passwordEncoder.encode(user.getPassword()));
-// Regisztrációkor minden felhasználónak Vendég szerepet adunk:
         user.setRole("ROLE_Vendeg");
         userRepo.save(user);
         model.addAttribute("id", user.getId());
